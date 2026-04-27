@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # 🗂️ Portfolio Site
 
@@ -102,4 +102,3 @@ npm run build && npm run start
 Сделано с помощью [Next.js](https://nextjs.org/) и задеплоено на [Vercel](https://vercel.com/)
 
 </div>
-]]>

@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<![CDATA[<div align="center">
 
-## Getting Started
+# 🗂️ Portfolio Site
 
-First, run the development server:
+**Многостраничный сайт-портфолио на Next.js 15 с блогом, App Router и SSG**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-deployed-black?logo=vercel&logoColor=white)](https://portfolio-site-kappa-three-68.vercel.app/)
+
+[🌐 Открыть сайт](https://portfolio-site-kappa-three-68.vercel.app/) · [📄 Отчёт по ЛР](./report_lab0102.md)
+
+</div>
+
+---
+
+## 📸 Скриншоты
+
+| Главная | Обо мне | Блог |
+|---|---|---|
+| ![home](screenshots/home.png) | ![about](screenshots/about.png) | ![blog](screenshots/blog.png) |
+
+---
+
+## 🚀 Стек
+
+| Технология | Версия | Назначение |
+|---|---|---|
+| **Next.js** | 15 | Фреймворк, App Router, SSG |
+| **TypeScript** | 5 | Типизация компонентов и данных |
+| **Tailwind CSS** | 4 | Утилитарная стилизация |
+| **Vercel** | — | Хостинг и автодеплой |
+
+---
+
+## 📁 Структура проекта
+
+```
+portfolio-site/
+├── app/
+│   ├── layout.tsx          # Общий макет + навигация
+│   ├── page.tsx            # Главная страница (Hero + Проекты)
+│   ├── about/
+│   │   └── page.tsx        # Страница «Обо мне»
+│   └── blog/
+│       ├── page.tsx        # Список статей
+│       ├── data.ts         # Данные статей (BlogPost[])
+│       └── [slug]/
+│           └── page.tsx    # Динамические страницы статей (SSG)
+├── public/
+├── package.json
+├── tailwind.config.ts
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚡ Ключевые особенности
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **App Router** — маршрутизация через структуру папок `app/`
+- **Static Site Generation (SSG)** — все страницы генерируются при сборке
+- **`generateStaticParams()`** — статическая генерация динамических маршрутов `/blog/[slug]`
+- **TypeScript** — полная типизация, интерфейс `BlogPost`
+- **Кастомная 404-страница** — через `not-found.tsx`
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Локальный запуск
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# 1. Клонировать репозиторий
+git clone https://github.com/akkariq/portfolio-site.git
+cd portfolio-site
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 2. Установить зависимости
+npm install
 
-## Deploy on Vercel
+# 3. Запустить в режиме разработки
+npm run dev
+# Открыть: http://localhost:3000
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Или собрать продакшн-версию
+npm run build && npm run start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📄 Лабораторная работа
+
+Репозиторий создан в рамках **Лабораторной работы №1.2** по дисциплине **«Технологии программирования»**.
+
+- **Студент:** Иванников Сергей Сергеевич
+- **Группа:** ПИН-б-о-24-1(2)
+- **Дата:** 27.04.2026
+- **Отчёт:** [report_lab0102.md](./report_lab0102.md)
+
+---
+
+<div align="center">
+
+Сделано с помощью [Next.js](https://nextjs.org/) и задеплоено на [Vercel](https://vercel.com/)
+
+</div>
+]]>
